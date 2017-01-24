@@ -1,2 +1,4 @@
 # Hello-World
-Just another repository
+
+This is a simple test to understand Git
+
