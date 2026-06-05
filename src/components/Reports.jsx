@@ -4,6 +4,7 @@ import {
   PieChart, Pie, Legend,
 } from 'recharts'
 import { formatDurationShort } from '../hooks/useTimer'
+import SankeyChart from './SankeyChart'
 
 const RANGES = [
   { label: '7 days', days: 7 },
@@ -97,6 +98,10 @@ export default function Reports({ store }) {
 
   return (
     <div>
+      <SankeyChart entries={entries} projects={projects} />
+
+      <hr className="divider" />
+
       <div className="grid-3" style={{ marginBottom: 20 }}>
         <div className="stat-card">
           <div className="stat-value">{formatDurationShort(totalMs)}</div>
